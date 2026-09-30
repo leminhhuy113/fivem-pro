@@ -16,7 +16,9 @@ RegisterNUICallback('close', function(_, cb)
 end)
 
 RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()
-    if isUiOpen then toggleUi(false) end
+    if isUiOpen then
+        toggleUi(false)
+    end
 end)
 
 AddEventHandler('onResourceStop', function(res)
