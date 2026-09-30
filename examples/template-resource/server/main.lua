@@ -9,7 +9,9 @@ RegisterNetEvent('template:server:claimReward', function()
 
     -- Iron Rule 1: client is never trusted — derive actor from source
     local Player = QBCore.Functions.GetPlayer(src)
-    if not Player then return end
+    if not Player then
+        return
+    end
 
     -- Rate limit: one claim per Config.Reward.cooldownMinutes
     local now = os.time()
@@ -23,8 +25,7 @@ RegisterNetEvent('template:server:claimReward', function()
     -- Iron Rule 2: one currency enum — amount comes from config, not the client
     Player.Functions.AddMoney(Config.Reward.currency, Config.Reward.amount, 'template-reward')
 
-    TriggerClientEvent('QBCore:Notify', src,
-        ('You received $%d'):format(Config.Reward.amount), 'success')
+    TriggerClientEvent('QBCore:Notify', src, ('You received $%d'):format(Config.Reward.amount), 'success')
 end)
 
 -- Clean up cooldowns on drop so rejoins aren't stuck
