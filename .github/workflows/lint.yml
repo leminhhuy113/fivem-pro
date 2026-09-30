@@ -11,13 +11,30 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install selene
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          url=$(gh api repos/Kampfkarren/selene/releases/latest \
+            --jq '.assets[] | select(.name | test("^selene-[0-9].*-linux\\.zip$")) | .browser_download_url')
+          curl -sSfL -o selene.zip "$url"
+          unzip -o -j selene.zip -d "$RUNNER_TEMP/selene-bin"
+          chmod +x "$RUNNER_TEMP/selene-bin/selene"
+          echo "$RUNNER_TEMP/selene-bin" >> "$GITHUB_PATH"
+
       - name: Selene lint
-        uses: NTBBloodbath/selene-action@v1
-        with:
-          args: --config selene.toml examples/
+        run: selene --config selene.toml examples/
+
+      - name: Install StyLua
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          url=$(gh api repos/JohnnyMorganz/StyLua/releases/latest \
+            --jq '.assets[] | select(.name == "stylua-linux-x86_64.zip") | .browser_download_url')
+          curl -sSfL -o stylua.zip "$url"
+          unzip -o -j stylua.zip -d "$RUNNER_TEMP/stylua-bin"
+          chmod +x "$RUNNER_TEMP/stylua-bin/stylua"
+          echo "$RUNNER_TEMP/stylua-bin" >> "$GITHUB_PATH"
 
       - name: StyLua format check
-        uses: JohnnyMorganz/stylua-action@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          args: --check examples/
+        run: stylua --check examples/
