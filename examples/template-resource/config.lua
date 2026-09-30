@@ -4,7 +4,7 @@ Config = {}
 Config.Debug = false
 
 Config.Reward = {
-    currency = 'cash',   -- one currency enum: cash | bank | blackmoney
+    currency = 'cash', -- one currency enum: cash | bank | blackmoney
     amount = 100,
     cooldownMinutes = 5,
 }
