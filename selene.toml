@@ -1,0 +1,31 @@
+# Selene config for fivem-pro example resources
+std = "lua54"
+
+[globals]
+# FiveM / CitizenFX runtime
+source = { any = true }
+GetCurrentResourceName = {}
+GetParentResourceName = {}
+GetPlayers = {}
+GetPlayerPed = {}
+GetEntityCoords = {}
+PlayerPedId = {}
+IsControlJustReleased = {}
+SetNuiFocus = {}
+SendNUIMessage = {}
+RegisterNetEvent = {}
+RegisterNUICallback = {}
+TriggerServerEvent = {}
+TriggerClientEvent = {}
+AddEventHandler = {}
+CreateThread = {}
+Wait = {}
+vector3 = {}
+
+# QBCore (via exports, not a global — but tolerate the pattern)
+QBCore = { any = true }
+
+# Template module tables
+TemplateClient = { any = true }
+Config = { any = true }
+Locales = { any = true }
