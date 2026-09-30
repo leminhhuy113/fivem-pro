@@ -1,0 +1,61 @@
+# FiveM / CitizenFX standard library for selene.
+# Referenced from selene.toml as: std = "fivem"
+
+[selene]
+base = "lua51"
+
+# The `source` magic variable inside event handlers
+[source]
+any = true
+
+# FiveM exports system
+[exports]
+any = true
+
+# CitizenFX runtime natives & helpers
+[GetCurrentResourceName]
+any = true
+[GetParentResourceName]
+any = true
+[GetPlayers]
+any = true
+[GetPlayerPed]
+any = true
+[GetEntityCoords]
+any = true
+[PlayerPedId]
+any = true
+[IsControlJustReleased]
+any = true
+[SetNuiFocus]
+any = true
+[SendNUIMessage]
+any = true
+[RegisterNetEvent]
+any = true
+[RegisterNUICallback]
+any = true
+[TriggerServerEvent]
+any = true
+[TriggerClientEvent]
+any = true
+[AddEventHandler]
+any = true
+[CreateThread]
+any = true
+[Wait]
+any = true
+[vector3]
+any = true
+
+# QBCore core object (via exports, tolerated as a global pattern)
+[QBCore]
+any = true
+
+# Template module tables
+[TemplateClient]
+any = true
+[Config]
+any = true
+[Locales]
+any = true
