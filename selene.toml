@@ -1,31 +1,6 @@
-# Selene config for fivem-pro example resources
-std = "lua54"
+# Selene config for fivem-pro example resources.
+# `fivem` is the custom FiveM standard library in fivem.toml.
+std = "fivem"
 
-[globals]
-# FiveM / CitizenFX runtime
-source = { any = true }
-GetCurrentResourceName = {}
-GetParentResourceName = {}
-GetPlayers = {}
-GetPlayerPed = {}
-GetEntityCoords = {}
-PlayerPedId = {}
-IsControlJustReleased = {}
-SetNuiFocus = {}
-SendNUIMessage = {}
-RegisterNetEvent = {}
-RegisterNUICallback = {}
-TriggerServerEvent = {}
-TriggerClientEvent = {}
-AddEventHandler = {}
-CreateThread = {}
-Wait = {}
-vector3 = {}
-
-# QBCore (via exports, not a global — but tolerate the pattern)
-QBCore = { any = true }
-
-# Template module tables
-TemplateClient = { any = true }
-Config = { any = true }
-Locales = { any = true }
+# fxmanifest.lua is a declarative DSL, not logic — don't lint it.
+exclude = ["**/fxmanifest.lua"]
