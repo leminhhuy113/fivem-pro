@@ -1,0 +1,23 @@
+name: Lua lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Selene lint
+        uses: NTBBloodbath/selene-action@v1
+        with:
+          args: --config selene.toml examples/
+
+      - name: StyLua format check
+        uses: JohnnyMorganz/stylua-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          args: --check examples/
