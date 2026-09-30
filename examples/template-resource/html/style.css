@@ -1,0 +1,18 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { background: transparent; font-family: system-ui, sans-serif; }
+.hidden { display: none !important; }
+#app {
+    position: fixed; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+}
+.card {
+    background: #111827; color: #f9fafb;
+    border: 1px solid #7cfc00; border-radius: 12px;
+    padding: 32px 40px; text-align: center;
+}
+.card h1 { margin-bottom: 8px; }
+.card p { opacity: 0.7; margin-bottom: 20px; }
+.card button {
+    background: #7cfc00; border: none; border-radius: 8px;
+    padding: 10px 20px; margin: 4px; cursor: pointer; font-weight: 600;
+}
