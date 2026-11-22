@@ -4,7 +4,7 @@ description: All-in-one FiveM development skill: Lua resource conventions (clien
 license: MIT
 metadata:
   author: 1MS Studio
-  version: "1.2.0"
+  version: "1.3.0"
   tags: fivem, lua, qbcore, esx, qbox, anticheat, mapping, fxserver, performance
 ---
 
@@ -31,6 +31,8 @@ in that domain:
 - `references/security.md` — anticheat hardening, detection patterns, exploit case studies, security audit checklist
 - `references/maps-sollumz.md` — map/MLO creation with Sollumz + CodeWalker
 - `references/platform-2026.md` — current Cfx runtime, OneSync, StateBag and Enhanced compatibility guidance
+- `references/framework-parity.md` — secure QBCore, ESX and QBox turn-in comparison
+- `references/sources.md` — dated registry of primary platform sources
 - `CHEATSHEET.md` — one-page quick reference for all domains
 - `examples/template-resource/` — minimal secure resource demonstrating every Iron Rule
 
@@ -77,6 +79,8 @@ in that domain:
 | Exploit, cheater, event abuse, audit | `references/security.md` |
 | Custom interior, MLO, props, ymap | `references/maps-sollumz.md` |
 | OneSync, StateBags, Enhanced or runtime compatibility | `references/platform-2026.md` |
+| Porting a secure flow across QBCore, ESX and QBox | `references/framework-parity.md` |
+| Verify a FiveM platform claim or source freshness | `references/sources.md` |
 | Quick lookup | `CHEATSHEET.md` |
 
 ## Conventions
@@ -90,3 +94,4 @@ in that domain:
   never hardcoded in logic.
 - **Config over code:** prices, durations, coordinates, toggles live in
   `config.lua`, not buried in handlers.
+
