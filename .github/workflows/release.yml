@@ -1,0 +1,39 @@
+name: Release skill
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build installable archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dist/fivem-pro
+          git archive --format=tar HEAD | tar -x -C dist/fivem-pro
+          (cd dist && zip -r fivem-pro.zip fivem-pro)
+
+      - name: Upload installable artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: fivem-pro
+          path: dist/fivem-pro.zip
+          if-no-files-found: error
+
+      - name: Publish GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        run: gh release create "$TAG" dist/fivem-pro.zip --generate-notes --title "$TAG"
+
