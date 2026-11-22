@@ -1,0 +1,35 @@
+name: Bug report
+description: Report an error, incorrect recommendation or broken example.
+title: "bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Please remove tokens, IP addresses and server/player data before posting."
+  - type: textarea
+    id: summary
+    attributes:
+      label: What is wrong?
+      description: State the incorrect behaviour or guidance clearly.
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Affected file and section
+      placeholder: references/security.md — Event handling
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction or expected correction
+      description: Use redacted, minimal code only.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: FiveM artifact/framework version
+      placeholder: FXServer 9000, QBCore 2.x
+
