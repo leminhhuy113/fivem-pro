@@ -7,6 +7,10 @@
   installation command copying and a domain navigator.
 - `.github/workflows/release.yml` — tag-driven installable ZIP and GitHub
   Release publishing.
+- `.github/workflows/pages.yml` — automatic GitHub Pages deployment for the
+  skill hub.
+- `CONTRIBUTING.md` and issue/PR templates — consistent source, safety and
+  validation standards for contributors.
 
 ## [1.2.0] — 2026-11-23
 
@@ -47,4 +51,5 @@
 Initial release. All-in-one FiveM dev skill: Lua conventions, QBCore patterns,
 ox ecosystem, NUI (vanilla + React), FXServer deployment, live resource workflow,
 anticheat hardening + security audit, map/MLO creation with Sollumz + CodeWalker.
+
 
