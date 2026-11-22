@@ -1,0 +1,15 @@
+name: Documentation checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate local documentation links and source registry
+        run: node scripts/check-docs.mjs
+
