@@ -60,6 +60,14 @@ cp -r fivem-pro /path/to/project/.claude/skills/
 For Codex, use `~/.codex/skills/`; for Cursor, use the workspace skill directory
 configured by your team. Restart or reload the assistant after installation.
 
+### Interactive skill hub
+
+[`docs/index.html`](docs/index.html) is a responsive, zero-build interactive
+landing page for the skill. It includes one-click install-command copying,
+keyboard-accessible navigation, a light/dark theme switch and a compact domain
+map. Open it locally, or publish the `docs/` directory with GitHub Pages when
+you want a shareable project site.
+
 ## ✨ 2026 platform update
 
 The skill now reflects current Cfx guidance rather than treating old patterns as
@@ -125,6 +133,13 @@ fivem-pro/
 Issues and PRs are welcome. Keep additions framework-agnostic where possible —
 and defensive: this skill is about **building** servers, not breaking them.
 
+## 📦 Releases
+
+Pushing a tag that starts with `v` (for example `v1.2.0`) creates a ready-to-
+install ZIP and attaches it to a GitHub Release. The archive has one top-level
+`fivem-pro/` directory so it can be extracted straight into a skills folder.
+
 ## 📄 License
 
 MIT — written from scratch by **1MS Studio**. See [LICENSE](LICENSE).
+
