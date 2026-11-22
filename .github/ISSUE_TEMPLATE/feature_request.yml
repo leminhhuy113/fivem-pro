@@ -1,0 +1,25 @@
+name: Reference or feature request
+description: Propose a focused addition to the skill.
+title: "feat: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: Describe the real development or operations gap.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed addition
+      description: Name the reference, checklist, example or template change.
+    validations:
+      required: true
+  - type: input
+    id: sources
+    attributes:
+      label: Official documentation or source
+      description: Link primary Cfx/framework documentation when available.
+
