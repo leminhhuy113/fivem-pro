@@ -4,7 +4,7 @@
 1. Client is never trusted — validate server-side, actor from `source`
 2. One currency enum (`cash|bank|blackmoney`), never boolean flags
 3. No busy `while true` — every thread has `Wait()`
-4. Explicit fxmanifest order: shared → client → server, `lua54 'yes'`
+4. Explicit fxmanifest order: shared → client → server; Lua 5.4 is already the default
 5. Capture `source` into a local before any yield
 6. NUI focus needs a close path: ESC, button, resource stop, logout
 7. Restart the resource, not the server

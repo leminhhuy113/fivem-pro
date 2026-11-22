@@ -5,7 +5,6 @@
 ```lua
 fx_version 'cerulean'
 game 'gta5'
-lua54 'yes'
 
 name 'my-resource'
 author '1MS Studio'
@@ -42,7 +41,8 @@ dependencies {
 ```
 
 Rules: shared → client → server, always. Declare every dependency you
-actually use. `lua54 'yes'` is mandatory for modern resources.
+actually use. Lua 5.4 is the default runtime; `lua54 'yes'` was deprecated in
+June 2025, so omit it from new manifests.
 
 ## Events — the trust boundary
 

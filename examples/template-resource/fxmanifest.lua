@@ -1,6 +1,5 @@
 fx_version 'cerulean'
 game 'gta5'
-lua54 'yes'
 
 name 'fivem-pro-template'
 author '1MS Studio'

@@ -15,7 +15,7 @@ reproduce with F8 console open — most client errors print there first.
 | NUI focus stuck — mouse trapped, can't ESC | No close path: missing ESC handler, close button, or `onResourceStop` cleanup | Add ESC/close-button handler calling `SetNuiFocus(false, false)`; also handle resource stop and player logout |
 | oxmysql connection timeout on start | Wrong credentials/host in connection string, or MariaDB not listening | Verify the connection string in server.cfg; `systemctl status mariadb`; check firewall/port |
 | `Could not find dependency X` on start | Dependency resource missing or misnamed in `[resources]` folder | Install/rename the dependency; ensure `ensure X` runs before dependents in server.cfg |
-| fxmanifest parse errors | Lua syntax error (missing brace/comma) in fxmanifest | Open fxmanifest, check brackets around `shared_scripts`/`client_scripts` blocks; `lua54 'yes'` present |
+| fxmanifest parse errors | Lua syntax error (missing brace/comma) in fxmanifest | Open fxmanifest and check brackets, commas and quoted file paths around `shared_scripts`/`client_scripts` blocks |
 | Players see old map / wrong game build | `sv_enforceGameBuild` not set or client on older build | Set `sv_enforceGameBuild 3095` (or current) in server.cfg; clients must update GTA V |
 | txAdmin restart loop / server won't stay up | Crash in `server.cfg` (bad exec path), or a resource crashing on start | Check txAdmin console for the first error line; start with minimal cfg, `ensure` resources one by one |
 | OneSync entity not syncing for some players | Entity outside their Infinity scope, or not server-owned | Confirm players are within scope range; create with server-side natives and `SetEntityAsMissionEntity` |

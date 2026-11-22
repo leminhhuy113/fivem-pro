@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.2.0] — 2026-11-23
+
+### Added
+- `references/platform-2026.md` — current Cfx platform guidance for Lua 5.4,
+  OneSync, State Bags, routing buckets, entity IDs and server hardening.
+- `docs/banner-2026.png` — refreshed premium project cover.
+
+### Changed
+- `README.md` — clearer installation guidance and a concise 2026 compatibility
+  summary with links to the detailed reference.
+- `SKILL.md` and the template manifest — removed the outdated instruction to
+  add `lua54 'yes'`; CfxLua 5.4 is now the default runtime.
+
 ## [1.1.0] — 2026-09-30
 
 ### Added

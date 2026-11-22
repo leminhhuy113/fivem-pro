@@ -4,7 +4,7 @@ description: All-in-one FiveM development skill: Lua resource conventions (clien
 license: MIT
 metadata:
   author: 1MS Studio
-  version: "1.1.0"
+  version: "1.2.0"
   tags: fivem, lua, qbcore, esx, qbox, anticheat, mapping, fxserver, performance
 ---
 
@@ -30,6 +30,7 @@ in that domain:
 - `references/troubleshooting.md` — symptom → cause → fix FAQ
 - `references/security.md` — anticheat hardening, detection patterns, exploit case studies, security audit checklist
 - `references/maps-sollumz.md` — map/MLO creation with Sollumz + CodeWalker
+- `references/platform-2026.md` — current Cfx runtime, OneSync, StateBag and Enhanced compatibility guidance
 - `CHEATSHEET.md` — one-page quick reference for all domains
 - `examples/template-resource/` — minimal secure resource demonstrating every Iron Rule
 
@@ -45,7 +46,8 @@ in that domain:
 3. **No busy `while true` loops.** Every thread has a sensible `Wait()`.
    Tight loops without waits freeze the game thread.
 4. **Explicit fxmanifest order.** `shared_scripts` → `client_scripts` →
-   `server_scripts`, dependencies declared, `lua54 'yes'`.
+   `server_scripts`, dependencies declared. Lua 5.4 is the current default;
+   do not add the deprecated `lua54 'yes'` flag to new manifests.
 5. **Capture caller before await.** In async server code, read `source` into a
    local at the top of the handler before any `Wait()`/await — `source` is
    not stable across yields.
@@ -74,6 +76,7 @@ in that domain:
 | Error, crash, "why doesn't this work" | `references/troubleshooting.md` |
 | Exploit, cheater, event abuse, audit | `references/security.md` |
 | Custom interior, MLO, props, ymap | `references/maps-sollumz.md` |
+| OneSync, StateBags, Enhanced or runtime compatibility | `references/platform-2026.md` |
 | Quick lookup | `CHEATSHEET.md` |
 
 ## Conventions

@@ -1,4 +1,4 @@
-![fivem-pro — All-in-one FiveM dev skill](docs/banner.png)
+![fivem-pro — All-in-one FiveM dev skill](docs/banner-2026.png)
 
 <div align="center">
 
@@ -9,7 +9,7 @@
 `Lua` · `QBCore` · `ESX` · `QBox` · `ox ecosystem` · `NUI` · `Deployment` · `Security` · `Mapping`
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-![Version](https://img.shields.io/badge/version-1.1.0-brightgreen)
+![Version](https://img.shields.io/badge/version-1.2.0-brightgreen)
 ![FiveM](https://img.shields.io/badge/FiveM-CitizenFX-orange)
 [![Lua lint](https://github.com/leminhhuy113/fivem-pro/actions/workflows/lint.yml/badge.svg)](https://github.com/leminhhuy113/fivem-pro/actions/workflows/lint.yml)
 
@@ -21,7 +21,7 @@
 
 `fivem-pro` teaches your AI assistant to build FiveM resources **the right way** —
 from the first Lua event to a hardened, production-ready server.
-One skill, fourteen domains, zero guesswork.
+One skill, fifteen domains, zero guesswork.
 
 ## ✨ What's inside
 
@@ -41,13 +41,14 @@ One skill, fourteen domains, zero guesswork.
 | 🩺 | **Troubleshooting** | Symptom → cause → fix FAQ |
 | 🛡️ | **Security** | Anticheat hardening, detection patterns, exploit case studies, audit checklist |
 | 🗺️ | **Mapping** | MLO / interior creation with Sollumz + CodeWalker |
+| 🧭 | **Platform 2026** | Lua 5.4 defaults, OneSync, state bags, Enhanced-era compatibility |
 
 Plus: `CHEATSHEET.md` (one-page quick reference) and `examples/template-resource/`
 (a minimal secure resource demonstrating every Iron Rule).
 
 ## 🚀 Install
 
-**Claude Code / Codex / Cursor** — copy to your skills directory:
+**Codex / Claude Code / Cursor** — copy the folder into the assistant's skills directory:
 
 ```bash
 cp -r fivem-pro ~/.claude/skills/
@@ -55,6 +56,28 @@ cp -r fivem-pro ~/.claude/skills/
 # or per-project:
 cp -r fivem-pro /path/to/project/.claude/skills/
 ```
+
+For Codex, use `~/.codex/skills/`; for Cursor, use the workspace skill directory
+configured by your team. Restart or reload the assistant after installation.
+
+## ✨ 2026 platform update
+
+The skill now reflects current Cfx guidance rather than treating old patterns as
+defaults:
+
+- **Lua 5.4 is already the runtime.** New manifests should omit the deprecated
+  `lua54 'yes'` flag.
+- **OneSync is the baseline for server-aware state.** Perform player iteration
+  and authority checks server-side; do not assume every player or entity exists
+  on a client's machine.
+- **State bags are shallow.** Use flat, namespaced keys and choose replication
+  deliberately. For sensitive state, enable `sv_stateBagStrictMode true` only
+  after compatibility testing.
+- **Network IDs cross machines; entity handles do not.** Validate scope and
+  existence before resolving a net ID client-side.
+
+See [`references/platform-2026.md`](references/platform-2026.md) for the
+implementation notes and links to the corresponding Cfx documentation.
 
 ## 🧠 The Iron Rules
 
@@ -93,7 +116,8 @@ fivem-pro/
     ├── cicd.md           # GitHub Actions for FiveM resources
     ├── troubleshooting.md # symptom → cause → fix FAQ
     ├── security.md       # anticheat + detection + exploit cases + audit
-    └── maps-sollumz.md   # map / MLO creation
+    ├── maps-sollumz.md   # map / MLO creation
+    └── platform-2026.md  # current Cfx platform compatibility notes
 ```
 
 ## 🤝 Contributing
