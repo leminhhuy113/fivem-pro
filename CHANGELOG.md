@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.3.0] — 2026-11-23
+
+### Added
+- `references/framework-parity.md` — a framework-parity secure turn-in flow
+  for QBCore, ESX and QBox.
+- `docs/quickstart.md` and `references/sources.md` — task-oriented onboarding
+  and a dated registry of primary Cfx sources.
+- `SECURITY.md`, `SUPPORT.md`, `CODE_OF_CONDUCT.md`, `CODEOWNERS` and
+  Dependabot configuration — clearer ownership, contribution and disclosure
+  expectations.
+- Documentation link/source-registry CI and `docs/social-preview.jpg` for
+  GitHub social sharing.
+
 ## [Unreleased]
 
 ### Added
@@ -51,5 +64,6 @@
 Initial release. All-in-one FiveM dev skill: Lua conventions, QBCore patterns,
 ox ecosystem, NUI (vanilla + React), FXServer deployment, live resource workflow,
 anticheat hardening + security audit, map/MLO creation with Sollumz + CodeWalker.
+
 
 
