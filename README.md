@@ -9,7 +9,7 @@
 `Lua` · `QBCore` · `ESX` · `QBox` · `ox ecosystem` · `NUI` · `Deployment` · `Security` · `Mapping`
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-![Version](https://img.shields.io/badge/version-1.2.0-brightgreen)
+![Version](https://img.shields.io/badge/version-1.3.0-brightgreen)
 ![FiveM](https://img.shields.io/badge/FiveM-CitizenFX-orange)
 [![Lua lint](https://github.com/leminhhuy113/fivem-pro/actions/workflows/lint.yml/badge.svg)](https://github.com/leminhhuy113/fivem-pro/actions/workflows/lint.yml)
 
@@ -21,7 +21,7 @@
 
 `fivem-pro` teaches your AI assistant to build FiveM resources **the right way** —
 from the first Lua event to a hardened, production-ready server.
-One skill, fifteen domains, zero guesswork.
+One skill, sixteen domains, zero guesswork.
 
 ## ✨ What's inside
 
@@ -42,6 +42,7 @@ One skill, fifteen domains, zero guesswork.
 | 🛡️ | **Security** | Anticheat hardening, detection patterns, exploit case studies, audit checklist |
 | 🗺️ | **Mapping** | MLO / interior creation with Sollumz + CodeWalker |
 | 🧭 | **Platform 2026** | Lua 5.4 defaults, OneSync, state bags, Enhanced-era compatibility |
+| 🤝 | **Framework parity** | The same server-authoritative reward flow for QBCore, ESX and QBox |
 
 Plus: `CHEATSHEET.md` (one-page quick reference) and `examples/template-resource/`
 (a minimal secure resource demonstrating every Iron Rule).
@@ -59,6 +60,15 @@ cp -r fivem-pro /path/to/project/.claude/skills/
 
 For Codex, use `~/.codex/skills/`; for Cursor, use the workspace skill directory
 configured by your team. Restart or reload the assistant after installation.
+
+## ⚡ Choose your path
+
+- **Building a resource?** Start with [`docs/quickstart.md`](docs/quickstart.md).
+- **Auditing event abuse?** Read [`references/security.md`](references/security.md).
+- **Supporting QBCore, ESX or QBox?** Compare the same secure turn-in flow in
+  [`references/framework-parity.md`](references/framework-parity.md).
+- **Checking a platform claim?** Consult the dated primary-source registry in
+  [`references/sources.md`](references/sources.md).
 
 ### Interactive skill hub
 
@@ -86,6 +96,15 @@ defaults:
 See [`references/platform-2026.md`](references/platform-2026.md) for the
 implementation notes and links to the corresponding Cfx documentation.
 
+## ✅ Trust and maintenance
+
+- Releases include a ready-to-install ZIP with one `fivem-pro/` top-level folder.
+- CI validates Lua formatting/linting and checks local documentation links.
+- Vulnerabilities go through [private reporting](SECURITY.md); contribution,
+  support and community expectations are documented in
+  [CONTRIBUTING.md](CONTRIBUTING.md), [SUPPORT.md](SUPPORT.md) and
+  [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+
 ## 🧠 The Iron Rules
 
 Everything this skill produces follows four rules:
@@ -104,9 +123,13 @@ fivem-pro/
 ├── LICENSE
 ├── CHANGELOG.md
 ├── CHEATSHEET.md         # one-page quick reference
+├── SECURITY.md            # private vulnerability reporting policy
 ├── selene.toml           # FiveM-aware Lua lint config
 ├── .github/workflows/
 │   └── lint.yml          # CI: selene + StyLua on PRs
+├── docs/
+│   ├── index.html         # interactive skill hub / GitHub Pages
+│   └── quickstart.md      # task-oriented entry points
 ├── examples/
 │   └── template-resource/  # minimal secure resource (every Iron Rule demoed)
 └── references/
@@ -124,7 +147,9 @@ fivem-pro/
     ├── troubleshooting.md # symptom → cause → fix FAQ
     ├── security.md       # anticheat + detection + exploit cases + audit
     ├── maps-sollumz.md   # map / MLO creation
-    └── platform-2026.md  # current Cfx platform compatibility notes
+    ├── platform-2026.md  # current Cfx platform compatibility notes
+    ├── framework-parity.md # QBCore / ESX / QBox secure-flow comparison
+    └── sources.md        # primary-source registry and freshness date
 ```
 
 ## 🤝 Contributing
@@ -143,5 +168,6 @@ install ZIP and attaches it to a GitHub Release. The archive has one top-level
 ## 📄 License
 
 MIT — written from scratch by **1MS Studio**. See [LICENSE](LICENSE).
+
 
 
