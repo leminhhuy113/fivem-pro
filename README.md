@@ -65,8 +65,7 @@ configured by your team. Restart or reload the assistant after installation.
 [`docs/index.html`](docs/index.html) is a responsive, zero-build interactive
 landing page for the skill. It includes one-click install-command copying,
 keyboard-accessible navigation, a light/dark theme switch and a compact domain
-map. Open it locally, or publish the `docs/` directory with GitHub Pages when
-you want a shareable project site.
+map. It is deployed automatically to GitHub Pages after changes under `docs/`.
 
 ## ✨ 2026 platform update
 
@@ -132,6 +131,8 @@ fivem-pro/
 
 Issues and PRs are welcome. Keep additions framework-agnostic where possible —
 and defensive: this skill is about **building** servers, not breaking them.
+Read [CONTRIBUTING.md](CONTRIBUTING.md) for the safety, source and validation
+requirements, or use the issue and pull-request templates included in `.github/`.
 
 ## 📦 Releases
 
@@ -142,4 +143,5 @@ install ZIP and attaches it to a GitHub Release. The archive has one top-level
 ## 📄 License
 
 MIT — written from scratch by **1MS Studio**. See [LICENSE](LICENSE).
+
 
