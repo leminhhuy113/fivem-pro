@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+- `docs/index.html` — responsive, accessible interactive skill hub with
+  installation command copying and a domain navigator.
+- `.github/workflows/release.yml` — tag-driven installable ZIP and GitHub
+  Release publishing.
+
 ## [1.2.0] — 2026-11-23
 
 ### Added
@@ -39,3 +47,4 @@
 Initial release. All-in-one FiveM dev skill: Lua conventions, QBCore patterns,
 ox ecosystem, NUI (vanilla + React), FXServer deployment, live resource workflow,
 anticheat hardening + security audit, map/MLO creation with Sollumz + CodeWalker.
+
