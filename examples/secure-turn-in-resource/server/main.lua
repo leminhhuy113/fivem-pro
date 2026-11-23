@@ -1,4 +1,4 @@
-local Adapter = require 'server.adapter'
+local Adapter = require('server.adapter')
 local active_jobs = {}
 
 local function notify(src, message)
@@ -7,14 +7,18 @@ end
 
 local function near_turn_in(src)
     local ped = GetPlayerPed(src)
-    if ped <= 0 then return false end
+    if ped <= 0 then
+        return false
+    end
 
     return #(GetEntityCoords(ped) - Config.TurnIn.coords) <= Config.TurnIn.radius
 end
 
 RegisterNetEvent('secure-turn-in:server:start', function()
     local src = source
-    if not Adapter.get_player(src) or not near_turn_in(src) then return end
+    if not Adapter.get_player(src) or not near_turn_in(src) then
+        return
+    end
     if active_jobs[src] then
         notify(src, 'You already have an active job.')
         return
@@ -28,7 +32,9 @@ RegisterNetEvent('secure-turn-in:server:turn_in', function()
     local src = source
     local player = Adapter.get_player(src)
     local job = active_jobs[src]
-    if not player or not job or not near_turn_in(src) then return end
+    if not player or not job or not near_turn_in(src) then
+        return
+    end
 
     if os.time() - job.started_at < Config.TurnIn.minimumDurationSeconds then
         notify(src, 'The job is not complete yet.')

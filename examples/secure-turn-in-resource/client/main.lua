@@ -18,9 +18,32 @@ CreateThread(function()
 
         if distance <= Config.TurnIn.radius then
             wait = 0
-            DrawMarker(1, Config.TurnIn.coords.x, Config.TurnIn.coords.y, Config.TurnIn.coords.z - 1.0,
-                0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 190, 230, 60, 150,
-                false, false, 2, false, nil, nil, false)
+            DrawMarker(
+                1,
+                Config.TurnIn.coords.x,
+                Config.TurnIn.coords.y,
+                Config.TurnIn.coords.z - 1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0,
+                1.0,
+                190,
+                230,
+                60,
+                150,
+                false,
+                false,
+                2,
+                false,
+                nil,
+                nil,
+                false
+            )
 
             if IsControlJustReleased(0, 38) then
                 if job_requested then
