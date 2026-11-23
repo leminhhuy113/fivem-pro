@@ -9,7 +9,7 @@
 `Lua` · `QBCore` · `ESX` · `QBox` · `ox ecosystem` · `NUI` · `Deployment` · `Security` · `Mapping`
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-![Version](https://img.shields.io/badge/version-1.4.0-brightgreen)
+![Version](https://img.shields.io/badge/version-1.4.1-brightgreen)
 ![FiveM](https://img.shields.io/badge/FiveM-CitizenFX-orange)
 [![Lua lint](https://github.com/leminhhuy113/fivem-pro/actions/workflows/lint.yml/badge.svg)](https://github.com/leminhhuy113/fivem-pro/actions/workflows/lint.yml)
 
