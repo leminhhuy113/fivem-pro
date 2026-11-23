@@ -1,10 +1,24 @@
 # Changelog
 
+## [1.4.0] — 2026-11-23
+
+### Added
+- `examples/secure-turn-in-resource/` — a runnable, framework-selectable
+  QBCore / ESX / QBox resource that demonstrates server-authoritative payout.
+- GitHub Discussions starter posts for onboarding, focused Q&A and project
+  showcases.
+
+### Changed
+- FiveM Selene definitions now cover the native calls used by the runnable
+  example.
+
 ## [1.3.0] — 2026-11-23
 
 ### Added
 - `references/framework-parity.md` — a framework-parity secure turn-in flow
   for QBCore, ESX and QBox.
+- `examples/secure-turn-in-resource/` — runnable server-authoritative QBCore,
+  ESX and QBox turn-in example selected through a server-side adapter.
 - `docs/quickstart.md` and `references/sources.md` — task-oriented onboarding
   and a dated registry of primary Cfx sources.
 - `SECURITY.md`, `SUPPORT.md`, `CODE_OF_CONDUCT.md`, `CODEOWNERS` and

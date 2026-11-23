@@ -9,7 +9,7 @@
 `Lua` · `QBCore` · `ESX` · `QBox` · `ox ecosystem` · `NUI` · `Deployment` · `Security` · `Mapping`
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-![Version](https://img.shields.io/badge/version-1.3.0-brightgreen)
+![Version](https://img.shields.io/badge/version-1.4.0-brightgreen)
 ![FiveM](https://img.shields.io/badge/FiveM-CitizenFX-orange)
 [![Lua lint](https://github.com/leminhhuy113/fivem-pro/actions/workflows/lint.yml/badge.svg)](https://github.com/leminhhuy113/fivem-pro/actions/workflows/lint.yml)
 
@@ -131,7 +131,8 @@ fivem-pro/
 │   ├── index.html         # interactive skill hub / GitHub Pages
 │   └── quickstart.md      # task-oriented entry points
 ├── examples/
-│   └── template-resource/  # minimal secure resource (every Iron Rule demoed)
+│   ├── template-resource/  # minimal secure resource (every Iron Rule demoed)
+│   └── secure-turn-in-resource/ # runnable QBCore / ESX / QBox turn-in example
 └── references/
     ├── lua.md            # FiveM Lua conventions
     ├── qbcore.md         # QBCore framework patterns

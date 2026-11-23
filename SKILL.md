@@ -4,7 +4,7 @@ description: All-in-one FiveM development skill: Lua resource conventions (clien
 license: MIT
 metadata:
   author: 1MS Studio
-  version: "1.3.0"
+  version: "1.4.0"
   tags: fivem, lua, qbcore, esx, qbox, anticheat, mapping, fxserver, performance
 ---
 
