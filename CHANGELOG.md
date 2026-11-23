@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.4.1] — 2026-11-23
+
+### Fixed
+- Reset the secure turn-in client request state whenever the server rejects a
+  start or turn-in request, so a player can retry safely after a denial.
+
 ## [1.4.0] — 2026-11-23
 
 ### Added
