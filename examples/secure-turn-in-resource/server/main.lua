@@ -17,6 +17,7 @@ end
 RegisterNetEvent('secure-turn-in:server:start', function()
     local src = source
     if not Adapter.get_player(src) or not near_turn_in(src) then
+        TriggerClientEvent('secure-turn-in:client:reset', src)
         return
     end
     if active_jobs[src] then
@@ -33,6 +34,7 @@ RegisterNetEvent('secure-turn-in:server:turn_in', function()
     local player = Adapter.get_player(src)
     local job = active_jobs[src]
     if not player or not job or not near_turn_in(src) then
+        TriggerClientEvent('secure-turn-in:client:reset', src)
         return
     end
 
